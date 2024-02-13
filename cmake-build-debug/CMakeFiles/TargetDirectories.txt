@@ -1,0 +1,3 @@
+/Users/brayanvizcaino/Desktop/CS 460/IgnoreComments/cmake-build-debug/CMakeFiles/IgnoreComments.dir
+/Users/brayanvizcaino/Desktop/CS 460/IgnoreComments/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/brayanvizcaino/Desktop/CS 460/IgnoreComments/cmake-build-debug/CMakeFiles/rebuild_cache.dir
