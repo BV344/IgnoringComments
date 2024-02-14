@@ -15,8 +15,7 @@ void FileHandler::openFile(const std::string& filename) {
         }
     }
 
-// Core PreProcessor Code
-// Comment Removal
+// Core Character Stream to Comment Removal
 // processFile
 void FileHandler::processFile() {
     if (!fileStream.is_open()) {
@@ -29,7 +28,9 @@ void FileHandler::processFile() {
 
     char ch;
     while (fileStream.get(ch)) {
+        if(comment_dfa.isComment == false){
         string_dfa.processChar(ch);
+        }
         // If we're inside a string literal, we don't care about comments
         if(string_dfa.isString()){
             fileContent += ch;

@@ -3,7 +3,7 @@
 /**
  * The CommentIdentifierDFA class implements a deterministic finite automaton (DFA) 
  * to identify comments within a stream of characters. It is designed to support 
- * both block comments (delimited by "/*" and "(*)/") and line comments (delimited by "//" and "\n").
+ * both block comments (delimited by "/asterisk" and "asterisk/") and line comments (delimited by "//" and "\n").
  * 
  * Key Features:
  *  - Employs a procedural state machine to transition between states based on the current character in the stream.
