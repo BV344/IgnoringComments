@@ -28,54 +28,24 @@ void FileHandler::processFile() {
 
     char ch;
     int startLine;
+    bool inComment = false;
     while (fileStream.get(ch)) {
-
-      /*
-        if(comment_dfa.isComment == false){
-            string_dfa.processChar(ch);
-            if(ch == '\n'){
-                lineNumber++;
-            }
-        }
-        // If we're inside a string literal, we don't care about comments
-        if(string_dfa.isString()){
-            fileContent += ch;
-        }
-        // Else, check if we're inside a comment
-        else{
-            comment_dfa.processChar(ch);
-            // If we are potentially inside a comment, push the character into the buffer
-            if(comment_dfa.isActive()){
-                buffer.push_back(ch);
-                if(ch == '\n'){
-                    lineNumber++;
-                }
-            }
-            // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
-            else if (buffer.size() > 0){
-                buffer.push_back(ch);
-                if(comment_dfa.isComment == true){
-                    bufferToWhiteSpace();
-                }
-                flushBuffer();
-            }
-            else{
-                fileContent += ch;
-            }
-        }
-      */
-
-
         comment_dfa.processChar(ch);
+        if(ch == '\n') {
+            lineNumber++;
+        }
+        
         // If we are potentially inside a comment, push the character into the buffer
         if(comment_dfa.isActive()){
-            buffer.push_back(ch);
-            if(ch == '\n'){
-                lineNumber++;
+            if (!inComment) {
+                startLine = lineNumber;
+                inComment = true;
             }
+            buffer.push_back(ch);
         }
         // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
         else if (buffer.size() > 0){
+            inComment = false;
             buffer.push_back(ch);
             if(comment_dfa.isComment == true){
                 bufferToWhiteSpace();
@@ -84,16 +54,26 @@ void FileHandler::processFile() {
         }
         else{
             fileContent += ch;
+
+        }
+
+        // if we're in an unended block comment, we can exit early
+        if (comment_dfa.getState() == State::UNENDED_BLOCK_COMMENT) {
+            std::cout << "ERROR: program contains C-style, unterminated comment on line " << startLine << std::endl;
+            exit(12);
         }
     }
 
+    State endState = comment_dfa.getState();
+    std::cout << "END STATE " << endState << std::endl;
+
     // if we reach the last byte, and we're still in a C-style comment or double quote, throw error
-    if (comment_dfa.getState() == State::DOUBLE_QUOTE) {
+    if (endState == State::DOUBLE_QUOTE) {
         std::cout << "ERROR: unterminated string literal on line " << lineNumber << std::endl;
         exit(-1);
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
-        std::cout << "ERROR: program contains C-style, unterminated comment on line " << lineNumber << std::endl;
+        std::cout << "ERROR: program contains C-style, unterminated comment on line " << startLine << std::endl;
         exit(12);
     }
 }
@@ -164,7 +144,7 @@ void FileHandler::printStoredFile() {
 }
 
 FileHandler::FileHandler() {
-    lineNumber = 0;
+    lineNumber = 1;
 }
 
 void FileHandler::outputToFile() {

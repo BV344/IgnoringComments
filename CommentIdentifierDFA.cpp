@@ -3,6 +3,13 @@
 
 CommentIdentifierDFA::CommentIdentifierDFA() : state_(State::START) {}
 
+std::ostream &operator << (std::ostream& strm, State s){
+
+     const std::string name[] = {"START", "SLASH", "BLOCK_COMMENT", "LINE_COMMENT", 
+        "BLOCK_COMMENT_END", "DOUBLE_QUOTE", "UNENDED_BLOCK_COMMENT_START", "UNENDED_BLOCK_COMMENT"};
+     return strm << name[s];
+}
+
 void CommentIdentifierDFA::processChar(char ch) {
     switch (state_) {
         case State::START:
@@ -11,6 +18,9 @@ void CommentIdentifierDFA::processChar(char ch) {
             }
             else if (ch == '/') {
                 state_ = State::SLASH;
+            }
+            else if (ch == '*') {
+                state_ = State::UNENDED_BLOCK_COMMENT_START;
             }
             if(isComment == true){
                 isComment = false;
@@ -50,6 +60,10 @@ void CommentIdentifierDFA::processChar(char ch) {
                 state_ = State::START;
             }
             break;
+        case State::UNENDED_BLOCK_COMMENT_START:
+            if (ch == '/') {
+                state_ = State::UNENDED_BLOCK_COMMENT;
+            }
         default:
             break;
     }

@@ -20,14 +20,18 @@
 #define COMMENT_IDENTIFIER_DFA_H
 
 #include <string>
-enum class State {
-    START,
-    SLASH,
-    BLOCK_COMMENT,
-    LINE_COMMENT,
-    BLOCK_COMMENT_END,
-    DOUBLE_QUOTE,
+enum State {
+    START = 0,
+    SLASH = 1,
+    BLOCK_COMMENT = 2,
+    LINE_COMMENT = 3,
+    BLOCK_COMMENT_END = 4,
+    DOUBLE_QUOTE = 5,
+    UNENDED_BLOCK_COMMENT_START = 6,
+    UNENDED_BLOCK_COMMENT = 7,
 };
+
+std::ostream &operator << (std::ostream& strm, State s);
 
 #include <vector>
 
