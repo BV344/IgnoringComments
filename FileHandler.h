@@ -24,6 +24,8 @@ public:
     void printInitialFile();
     void printStoredFile();
 
+    void printBuffer();
+
     ~FileHandler() {
         if (fileStream.is_open()) {
             fileStream.close();
@@ -31,6 +33,7 @@ public:
     }
 
 private:
+    std::string fileName;
     std::vector<char> buffer;
     void bufferToWhiteSpace();
     void flushBuffer();

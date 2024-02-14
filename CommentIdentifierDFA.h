@@ -20,17 +20,19 @@
 #define COMMENT_IDENTIFIER_DFA_H
 
 #include <string>
+enum class State {
+    START,
+    SLASH,
+    BLOCK_COMMENT,
+    LINE_COMMENT,
+    BLOCK_COMMENT_END,
+    DOUBLE_QUOTE,
+};
+
 #include <vector>
 
 class CommentIdentifierDFA {
 public:
-    enum class State {
-        START,
-        SLASH,
-        BLOCK_COMMENT,
-        LINE_COMMENT,
-        BLOCK_COMMENT_END
-    };
 
     CommentIdentifierDFA();
 

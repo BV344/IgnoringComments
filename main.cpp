@@ -13,6 +13,6 @@ int main(int argc, char *argv[]) {
 //	fileHandler.printInitialFile();
 	fileHandler.processFile();
 	fileHandler.printStoredFile();
-    fileHandler.outputToFile();
+   fileHandler.outputToFile();
 
 }

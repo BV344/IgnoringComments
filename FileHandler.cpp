@@ -1,7 +1,6 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
-#include <sstream> // For std::stringstream
 #include "CommentIdentifierDFA.h"
 #include "StringIdentifierDFA.h"
 #include "FileHandler.h"
@@ -13,6 +12,7 @@ void FileHandler::openFile(const std::string& filename) {
         if (!fileStream.is_open()) {
             std::cerr << "Error opening file: " << filename << "\n";
         }
+        fileName = filename;
     }
 
 // Core Character Stream to Comment Removal
@@ -27,8 +27,10 @@ void FileHandler::processFile() {
     CommentIdentifierDFA comment_dfa;
 
     char ch;
+    int startLine;
     while (fileStream.get(ch)) {
 
+      /*
         if(comment_dfa.isComment == false){
             string_dfa.processChar(ch);
             if(ch == '\n'){
@@ -61,6 +63,34 @@ void FileHandler::processFile() {
                 fileContent += ch;
             }
         }
+      */
+
+
+        comment_dfa.processChar(ch);
+        // If we are potentially inside a comment, push the character into the buffer
+        if(comment_dfa.isActive()){
+            buffer.push_back(ch);
+            if(ch == '\n'){
+                lineNumber++;
+            }
+        }
+        // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
+        else if (buffer.size() > 0){
+            buffer.push_back(ch);
+            if(comment_dfa.isComment == true){
+                bufferToWhiteSpace();
+            }
+            flushBuffer();
+        }
+        else{
+            fileContent += ch;
+        }
+    }
+
+    // if we reach the last byte, and we're still in a C-style comment or double quote, throw error
+    if (comment_dfa.getState() == State::DOUBLE_QUOTE) {
+        std::cout << "ERROR: unterminated string literal on line " << lineNumber << std::endl;
+        exit(-1);
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
         std::cout << "ERROR: program contains C-style, unterminated comment on line " << lineNumber << std::endl;
@@ -87,6 +117,14 @@ void FileHandler::flushBuffer(){
         fileContent += buffer[i];
     }
     buffer.clear();
+}
+
+void FileHandler::printBuffer(){
+    std::cout << "BUFFER: ";
+    for(int i = 0; i < buffer.size(); i++) {
+       std::cout << buffer[i];
+    }
+    std::cout << std::endl;
 }
 
 // printInitialFile
@@ -119,7 +157,7 @@ void FileHandler::printInitialFile() {
         if (newPosition != originalPosition) {
             std::cerr << "Failed to restore the stream position." << std::endl;
         }
-    }
+}
 
 void FileHandler::printStoredFile() {
     std::cout << fileContent;
@@ -130,13 +168,18 @@ FileHandler::FileHandler() {
 }
 
 void FileHandler::outputToFile() {
-    std::ofstream outputFile("output.c"); // Open File
+    size_t lastIndex = fileName.find_last_of(".");
+    std::string outputName = fileName.substr(0, lastIndex);
+    outputName += "-comments_replaced_with_whitespace"
+       + fileName.substr(lastIndex, fileName.length() - lastIndex + 1);
+
+    std::ofstream outputFile(outputName); // Open File
     if (outputFile.is_open()) {
         outputFile << fileContent; // Write the string to the file
         outputFile.close();
-        std::cout << "String has been written to output.txt successfully." << std::endl;
+        std::cout << "String has been written to " << outputName << " successfully." << std::endl;
     } else {
-        std::cerr << "Unable to open output.txt for writing." << std::endl;
+        std::cerr << "Unable to open " << outputName << " for writing." << std::endl;
     }
 
 }

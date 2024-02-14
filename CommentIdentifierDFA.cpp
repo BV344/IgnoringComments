@@ -1,13 +1,15 @@
 // CommentIdentifierDFA.cpp
 #include "CommentIdentifierDFA.h"
-#include <iostream>
 
 CommentIdentifierDFA::CommentIdentifierDFA() : state_(State::START) {}
 
 void CommentIdentifierDFA::processChar(char ch) {
     switch (state_) {
         case State::START:
-            if (ch == '/') {
+            if (ch == '"') {
+                state_ = State::DOUBLE_QUOTE;
+            }
+            else if (ch == '/') {
                 state_ = State::SLASH;
             }
             if(isComment == true){
@@ -40,6 +42,11 @@ void CommentIdentifierDFA::processChar(char ch) {
             break;
         case State::LINE_COMMENT:
             if (ch == '\n') {
+                state_ = State::START;
+            }
+            break;
+        case State::DOUBLE_QUOTE:
+            if (ch == '"') {
                 state_ = State::START;
             }
             break;
