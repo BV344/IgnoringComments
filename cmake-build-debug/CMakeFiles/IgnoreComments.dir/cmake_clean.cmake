@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj"
-  "CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj.d"
+  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj"
+  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj.d"
+  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj"
+  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj.d"
+  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj"
+  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj.d"
   "CMakeFiles/IgnoreComments.dir/main.cpp.obj"
   "CMakeFiles/IgnoreComments.dir/main.cpp.obj.d"
   "IgnoreComments.exe"

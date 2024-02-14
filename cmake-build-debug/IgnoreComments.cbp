@@ -82,10 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/Tokenizer.cpp">
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/CommentIdentifierDFA.cpp">
 			<Option target="IgnoreComments"/>
 		</Unit>
-		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/Tokenizer.hpp">
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/CommentIdentifierDFA.h">
+			<Option target="IgnoreComments"/>
+		</Unit>
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/FileHandler.cpp">
+			<Option target="IgnoreComments"/>
+		</Unit>
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/FileHandler.h">
+			<Option target="IgnoreComments"/>
+		</Unit>
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/StringIdentifierDFA.cpp">
+			<Option target="IgnoreComments"/>
+		</Unit>
+		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/StringIdentifierDFA.h">
 			<Option target="IgnoreComments"/>
 		</Unit>
 		<Unit filename="C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/main.cpp">

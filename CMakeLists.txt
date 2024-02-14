@@ -4,6 +4,10 @@ project(IgnoreComments)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(IgnoreComments main.cpp
-        Tokenizer.cpp
-        Tokenizer.hpp
+        FileHandler.cpp
+        FileHandler.h
+        CommentIdentifierDFA.cpp
+        CommentIdentifierDFA.h
+        StringIdentifierDFA.cpp
+        StringIdentifierDFA.h
 )

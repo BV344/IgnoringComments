@@ -1,5 +1,5 @@
 // StringIdentifierDFA.cpp
-#include "../include/StringIdentifierDFA.h"
+#include "StringIdentifierDFA.h"
 
 StringIdentifierDFA::StringIdentifierDFA() : state_(State::START) {}
 

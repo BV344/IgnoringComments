@@ -82,35 +82,67 @@ CMakeFiles/IgnoreComments.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IgnoreComments.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\main.cpp" -o CMakeFiles\IgnoreComments.dir\main.cpp.s
 
-CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj: CMakeFiles/IgnoreComments.dir/flags.make
-CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj: C:/Users/Brayan\ Vizcaino/Desktop/CS\ 460/IgnoringComments/Tokenizer.cpp
-CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj: CMakeFiles/IgnoreComments.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj -MF CMakeFiles\IgnoreComments.dir\Tokenizer.cpp.obj.d -o CMakeFiles\IgnoreComments.dir\Tokenizer.cpp.obj -c "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\Tokenizer.cpp"
+CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj: CMakeFiles/IgnoreComments.dir/flags.make
+CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj: C:/Users/Brayan\ Vizcaino/Desktop/CS\ 460/IgnoringComments/FileHandler.cpp
+CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj: CMakeFiles/IgnoreComments.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj -MF CMakeFiles\IgnoreComments.dir\FileHandler.cpp.obj.d -o CMakeFiles\IgnoreComments.dir\FileHandler.cpp.obj -c "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\FileHandler.cpp"
 
-CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\Tokenizer.cpp" > CMakeFiles\IgnoreComments.dir\Tokenizer.cpp.i
+CMakeFiles/IgnoreComments.dir/FileHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IgnoreComments.dir/FileHandler.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\FileHandler.cpp" > CMakeFiles\IgnoreComments.dir\FileHandler.cpp.i
 
-CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\Tokenizer.cpp" -o CMakeFiles\IgnoreComments.dir\Tokenizer.cpp.s
+CMakeFiles/IgnoreComments.dir/FileHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IgnoreComments.dir/FileHandler.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\FileHandler.cpp" -o CMakeFiles\IgnoreComments.dir\FileHandler.cpp.s
+
+CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj: CMakeFiles/IgnoreComments.dir/flags.make
+CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj: C:/Users/Brayan\ Vizcaino/Desktop/CS\ 460/IgnoringComments/CommentIdentifierDFA.cpp
+CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj: CMakeFiles/IgnoreComments.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj -MF CMakeFiles\IgnoreComments.dir\CommentIdentifierDFA.cpp.obj.d -o CMakeFiles\IgnoreComments.dir\CommentIdentifierDFA.cpp.obj -c "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\CommentIdentifierDFA.cpp"
+
+CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\CommentIdentifierDFA.cpp" > CMakeFiles\IgnoreComments.dir\CommentIdentifierDFA.cpp.i
+
+CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\CommentIdentifierDFA.cpp" -o CMakeFiles\IgnoreComments.dir\CommentIdentifierDFA.cpp.s
+
+CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj: CMakeFiles/IgnoreComments.dir/flags.make
+CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj: C:/Users/Brayan\ Vizcaino/Desktop/CS\ 460/IgnoringComments/StringIdentifierDFA.cpp
+CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj: CMakeFiles/IgnoreComments.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj -MF CMakeFiles\IgnoreComments.dir\StringIdentifierDFA.cpp.obj.d -o CMakeFiles\IgnoreComments.dir\StringIdentifierDFA.cpp.obj -c "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\StringIdentifierDFA.cpp"
+
+CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\StringIdentifierDFA.cpp" > CMakeFiles\IgnoreComments.dir\StringIdentifierDFA.cpp.i
+
+CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\StringIdentifierDFA.cpp" -o CMakeFiles\IgnoreComments.dir\StringIdentifierDFA.cpp.s
 
 # Object files for target IgnoreComments
 IgnoreComments_OBJECTS = \
 "CMakeFiles/IgnoreComments.dir/main.cpp.obj" \
-"CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj"
+"CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj" \
+"CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj" \
+"CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj"
 
 # External object files for target IgnoreComments
 IgnoreComments_EXTERNAL_OBJECTS =
 
 IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/main.cpp.obj
-IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj
+IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj
+IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj
+IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj
 IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/build.make
 IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/linklibs.rsp
 IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/objects1.rsp
 IgnoreComments.exe: CMakeFiles/IgnoreComments.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable IgnoreComments.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Brayan Vizcaino\Desktop\CS 460\IgnoringComments\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable IgnoreComments.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\IgnoreComments.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

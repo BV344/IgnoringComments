@@ -2,9 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <sstream> // For std::stringstream
-#include "../include/CommentIdentifierDFA.h"
-#include "../include/StringIdentifierDFA.h"
-#include "../include/FileHandler.h"
+#include "CommentIdentifierDFA.h"
+#include "StringIdentifierDFA.h"
+#include "FileHandler.h"
 
 
 // openFile
@@ -56,7 +56,7 @@ void FileHandler::processFile() {
         }
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
-        std::cout << "there is an error" << std::endl;
+        std::cout << "there is an error on line: " << lineNumber << std::endl;
     }
 }
 
@@ -65,6 +65,7 @@ void FileHandler::processFile() {
 void FileHandler::bufferToWhiteSpace(){
     for(int i = 0; i < buffer.size(); i++){
         if(buffer[i] == '\n'){
+            lineNumber++;
             continue;
         }
         buffer[i] = ' ';
@@ -97,6 +98,7 @@ void FileHandler::printInitialFile() {
         // Read and print the file contents
         std::string line;
         while (getline(fileStream, line)) {
+            lineNumber++;
             std::cout << line << std::endl;
         }
 
@@ -113,4 +115,20 @@ void FileHandler::printInitialFile() {
 
 void FileHandler::printStoredFile() {
     std::cout << fileContent;
+}
+
+FileHandler::FileHandler() {
+    lineNumber = 0;
+}
+
+void FileHandler::outputToFile() {
+    std::ofstream outputFile("output.txt"); // Open the file for writing
+    if (outputFile.is_open()) { // Check if the file is opened successfully
+        outputFile << fileContent; // Write the string to the file
+        outputFile.close(); // Close the file
+        std::cout << "String has been written to output.txt successfully." << std::endl;
+    } else {
+        std::cerr << "Unable to open output.txt for writing." << std::endl;
+    }
+
 }

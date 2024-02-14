@@ -128,29 +128,77 @@ IgnoreComments/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/build
 .PHONY : IgnoreComments/fast
 
-Tokenizer.obj: Tokenizer.cpp.obj
-.PHONY : Tokenizer.obj
+CommentIdentifierDFA.obj: CommentIdentifierDFA.cpp.obj
+.PHONY : CommentIdentifierDFA.obj
 
 # target to build an object file
-Tokenizer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.obj
-.PHONY : Tokenizer.cpp.obj
+CommentIdentifierDFA.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj
+.PHONY : CommentIdentifierDFA.cpp.obj
 
-Tokenizer.i: Tokenizer.cpp.i
-.PHONY : Tokenizer.i
+CommentIdentifierDFA.i: CommentIdentifierDFA.cpp.i
+.PHONY : CommentIdentifierDFA.i
 
 # target to preprocess a source file
-Tokenizer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.i
-.PHONY : Tokenizer.cpp.i
+CommentIdentifierDFA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.i
+.PHONY : CommentIdentifierDFA.cpp.i
 
-Tokenizer.s: Tokenizer.cpp.s
-.PHONY : Tokenizer.s
+CommentIdentifierDFA.s: CommentIdentifierDFA.cpp.s
+.PHONY : CommentIdentifierDFA.s
 
 # target to generate assembly for a file
-Tokenizer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/Tokenizer.cpp.s
-.PHONY : Tokenizer.cpp.s
+CommentIdentifierDFA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.s
+.PHONY : CommentIdentifierDFA.cpp.s
+
+FileHandler.obj: FileHandler.cpp.obj
+.PHONY : FileHandler.obj
+
+# target to build an object file
+FileHandler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj
+.PHONY : FileHandler.cpp.obj
+
+FileHandler.i: FileHandler.cpp.i
+.PHONY : FileHandler.i
+
+# target to preprocess a source file
+FileHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.i
+.PHONY : FileHandler.cpp.i
+
+FileHandler.s: FileHandler.cpp.s
+.PHONY : FileHandler.s
+
+# target to generate assembly for a file
+FileHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.s
+.PHONY : FileHandler.cpp.s
+
+StringIdentifierDFA.obj: StringIdentifierDFA.cpp.obj
+.PHONY : StringIdentifierDFA.obj
+
+# target to build an object file
+StringIdentifierDFA.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj
+.PHONY : StringIdentifierDFA.cpp.obj
+
+StringIdentifierDFA.i: StringIdentifierDFA.cpp.i
+.PHONY : StringIdentifierDFA.i
+
+# target to preprocess a source file
+StringIdentifierDFA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.i
+.PHONY : StringIdentifierDFA.cpp.i
+
+StringIdentifierDFA.s: StringIdentifierDFA.cpp.s
+.PHONY : StringIdentifierDFA.s
+
+# target to generate assembly for a file
+StringIdentifierDFA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\IgnoreComments.dir\build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.s
+.PHONY : StringIdentifierDFA.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -185,9 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... IgnoreComments
-	@echo ... Tokenizer.obj
-	@echo ... Tokenizer.i
-	@echo ... Tokenizer.s
+	@echo ... CommentIdentifierDFA.obj
+	@echo ... CommentIdentifierDFA.i
+	@echo ... CommentIdentifierDFA.s
+	@echo ... FileHandler.obj
+	@echo ... FileHandler.i
+	@echo ... FileHandler.s
+	@echo ... StringIdentifierDFA.obj
+	@echo ... StringIdentifierDFA.i
+	@echo ... StringIdentifierDFA.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
