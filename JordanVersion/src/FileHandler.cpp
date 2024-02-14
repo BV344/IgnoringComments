@@ -15,6 +15,8 @@ void FileHandler::openFile(const std::string& filename) {
         }
     }
 
+// Core PreProcessor Code
+// Comment Removal
 // processFile
 void FileHandler::processFile() {
     if (!fileStream.is_open()) {
@@ -38,10 +40,10 @@ void FileHandler::processFile() {
             // If we are potentially inside a comment, push the character into the buffer
             if(comment_dfa.isActive()){
                 buffer.push_back(ch);
-                std::cout << "Read character: " << ch << " (" << (int)ch << ")\n"; // Debug print
             }
             // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
             else if (buffer.size() > 0){
+                buffer.push_back(ch);
                 if(comment_dfa.isComment == true){
                     bufferToWhiteSpace();
                 }

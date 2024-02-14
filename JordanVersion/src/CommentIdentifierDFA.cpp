@@ -1,5 +1,6 @@
 // CommentIdentifierDFA.cpp
 #include "../include/CommentIdentifierDFA.h"
+#include <iostream>
 
 CommentIdentifierDFA::CommentIdentifierDFA() : state_(State::START) {}
 
