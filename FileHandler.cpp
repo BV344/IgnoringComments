@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include "CommentIdentifierDFA.h"
-#include "StringIdentifierDFA.h"
 #include "FileHandler.h"
 
 
@@ -23,7 +22,6 @@ void FileHandler::processFile() {
         return;
     }
 
-    StringIdentifierDFA string_dfa;
     CommentIdentifierDFA comment_dfa;
 
     char ch;

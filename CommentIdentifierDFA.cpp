@@ -64,6 +64,13 @@ void CommentIdentifierDFA::processChar(char ch) {
             if (ch == '/') {
                 state_ = State::UNENDED_BLOCK_COMMENT;
             }
+            else if (ch == '*') { // stay in current state if another *
+                break;
+            }
+            else {
+                state_ = State::START;
+            }
+            break;
         default:
             break;
     }

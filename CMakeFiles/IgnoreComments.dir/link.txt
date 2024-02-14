@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/IgnoreComments.dir/main.cpp.o CMakeFiles/IgnoreComments.dir/FileHandler.cpp.o CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.o CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.o -o IgnoreComments 

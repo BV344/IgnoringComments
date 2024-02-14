@@ -1,3 +1,0 @@
-/mnt/e/school/IgnoringComments/CMakeFiles/IgnoreComments.dir
-/mnt/e/school/IgnoringComments/CMakeFiles/edit_cache.dir
-/mnt/e/school/IgnoringComments/CMakeFiles/rebuild_cache.dir
