@@ -6,10 +6,10 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.27"
+						"string" : "3.24"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "IgnoreComments::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-IgnoreComments-Debug-5d3db1eee2c9a9315cb9.json",
+					"jsonFile" : "target-IgnoreComments-Debug-f39e1178f47c6024119d.json",
 					"name" : "IgnoreComments",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/brayanvizcaino/Desktop/CS 460/IgnoreComments/cmake-build-debug",
-		"source" : "/Users/brayanvizcaino/Desktop/CS 460/IgnoreComments"
+		"build" : "C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug",
+		"source" : "C:/Users/Brayan Vizcaino/Desktop/CS 460/IgnoringComments"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 4
 	}
 }
