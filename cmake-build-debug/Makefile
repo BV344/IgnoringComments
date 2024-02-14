@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments"
+CMAKE_SOURCE_DIR = "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComment
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments/cmake-build-debug/CMakeFiles" "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug/CMakeFiles" "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named IgnoreComments
+# Target rules for targets named IgnoringComments
 
 # Build rule for target.
-IgnoreComments: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IgnoreComments
-.PHONY : IgnoreComments
+IgnoringComments: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 IgnoringComments
+.PHONY : IgnoringComments
 
 # fast build rule for target.
-IgnoreComments/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/build
-.PHONY : IgnoreComments/fast
+IgnoringComments/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/build
+.PHONY : IgnoringComments/fast
 
 CommentIdentifierDFA.o: CommentIdentifierDFA.cpp.o
 .PHONY : CommentIdentifierDFA.o
 
 # target to build an object file
 CommentIdentifierDFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/CommentIdentifierDFA.cpp.o
 .PHONY : CommentIdentifierDFA.cpp.o
 
 CommentIdentifierDFA.i: CommentIdentifierDFA.cpp.i
@@ -142,7 +142,7 @@ CommentIdentifierDFA.i: CommentIdentifierDFA.cpp.i
 
 # target to preprocess a source file
 CommentIdentifierDFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/CommentIdentifierDFA.cpp.i
 .PHONY : CommentIdentifierDFA.cpp.i
 
 CommentIdentifierDFA.s: CommentIdentifierDFA.cpp.s
@@ -150,7 +150,7 @@ CommentIdentifierDFA.s: CommentIdentifierDFA.cpp.s
 
 # target to generate assembly for a file
 CommentIdentifierDFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/CommentIdentifierDFA.cpp.s
 .PHONY : CommentIdentifierDFA.cpp.s
 
 FileHandler.o: FileHandler.cpp.o
@@ -158,7 +158,7 @@ FileHandler.o: FileHandler.cpp.o
 
 # target to build an object file
 FileHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/FileHandler.cpp.o
 .PHONY : FileHandler.cpp.o
 
 FileHandler.i: FileHandler.cpp.i
@@ -166,7 +166,7 @@ FileHandler.i: FileHandler.cpp.i
 
 # target to preprocess a source file
 FileHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/FileHandler.cpp.i
 .PHONY : FileHandler.cpp.i
 
 FileHandler.s: FileHandler.cpp.s
@@ -174,39 +174,15 @@ FileHandler.s: FileHandler.cpp.s
 
 # target to generate assembly for a file
 FileHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/FileHandler.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/FileHandler.cpp.s
 .PHONY : FileHandler.cpp.s
-
-StringIdentifierDFA.o: StringIdentifierDFA.cpp.o
-.PHONY : StringIdentifierDFA.o
-
-# target to build an object file
-StringIdentifierDFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.o
-.PHONY : StringIdentifierDFA.cpp.o
-
-StringIdentifierDFA.i: StringIdentifierDFA.cpp.i
-.PHONY : StringIdentifierDFA.i
-
-# target to preprocess a source file
-StringIdentifierDFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.i
-.PHONY : StringIdentifierDFA.cpp.i
-
-StringIdentifierDFA.s: StringIdentifierDFA.cpp.s
-.PHONY : StringIdentifierDFA.s
-
-# target to generate assembly for a file
-StringIdentifierDFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.s
-.PHONY : StringIdentifierDFA.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -214,7 +190,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -222,7 +198,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoreComments.dir/build.make CMakeFiles/IgnoreComments.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IgnoringComments.dir/build.make CMakeFiles/IgnoringComments.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -233,16 +209,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... IgnoreComments"
+	@echo "... IgnoringComments"
 	@echo "... CommentIdentifierDFA.o"
 	@echo "... CommentIdentifierDFA.i"
 	@echo "... CommentIdentifierDFA.s"
 	@echo "... FileHandler.o"
 	@echo "... FileHandler.i"
 	@echo "... FileHandler.s"
-	@echo "... StringIdentifierDFA.o"
-	@echo "... StringIdentifierDFA.i"
-	@echo "... StringIdentifierDFA.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

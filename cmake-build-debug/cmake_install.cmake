@@ -1,4 +1,4 @@
-# Install script for directory: /Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments
+# Install script for directory: /Users/brayanvizcaino/Desktop/CS 460/IgnoringComments
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/nickcabrales/Desktop/CS 460 Documents/IgnoringComments/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/brayanvizcaino/Desktop/CS 460/IgnoringComments/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

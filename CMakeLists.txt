@@ -3,11 +3,9 @@ project(IgnoreComments)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(IgnoreComments main.cpp
+add_executable(IgnoringComments main.cpp
         FileHandler.cpp
         FileHandler.h
         CommentIdentifierDFA.cpp
         CommentIdentifierDFA.h
-        StringIdentifierDFA.cpp
-        StringIdentifierDFA.h
 )
