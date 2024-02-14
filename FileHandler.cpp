@@ -28,8 +28,12 @@ void FileHandler::processFile() {
 
     char ch;
     while (fileStream.get(ch)) {
+
         if(comment_dfa.isComment == false){
-        string_dfa.processChar(ch);
+            string_dfa.processChar(ch);
+            if(ch == '\n'){
+                lineNumber++;
+            }
         }
         // If we're inside a string literal, we don't care about comments
         if(string_dfa.isString()){
@@ -41,6 +45,9 @@ void FileHandler::processFile() {
             // If we are potentially inside a comment, push the character into the buffer
             if(comment_dfa.isActive()){
                 buffer.push_back(ch);
+                if(ch == '\n'){
+                    lineNumber++;
+                }
             }
             // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
             else if (buffer.size() > 0){
@@ -57,6 +64,7 @@ void FileHandler::processFile() {
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
         std::cout << "there is an error on line: " << lineNumber << std::endl;
+        exit(12);
     }
 }
 
@@ -65,7 +73,7 @@ void FileHandler::processFile() {
 void FileHandler::bufferToWhiteSpace(){
     for(int i = 0; i < buffer.size(); i++){
         if(buffer[i] == '\n'){
-            lineNumber++;
+            //lineNumber++;
             continue;
         }
         buffer[i] = ' ';

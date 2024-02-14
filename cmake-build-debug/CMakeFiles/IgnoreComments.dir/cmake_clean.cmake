@@ -1,16 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj"
-  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.obj.d"
-  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj"
-  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.obj.d"
-  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj"
-  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.obj.d"
-  "CMakeFiles/IgnoreComments.dir/main.cpp.obj"
-  "CMakeFiles/IgnoreComments.dir/main.cpp.obj.d"
-  "IgnoreComments.exe"
-  "IgnoreComments.exe.manifest"
+  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.o"
+  "CMakeFiles/IgnoreComments.dir/CommentIdentifierDFA.cpp.o.d"
+  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.o"
+  "CMakeFiles/IgnoreComments.dir/FileHandler.cpp.o.d"
+  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.o"
+  "CMakeFiles/IgnoreComments.dir/StringIdentifierDFA.cpp.o.d"
+  "CMakeFiles/IgnoreComments.dir/main.cpp.o"
+  "CMakeFiles/IgnoreComments.dir/main.cpp.o.d"
+  "IgnoreComments"
   "IgnoreComments.pdb"
-  "libIgnoreComments.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

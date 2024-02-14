@@ -1,16 +1,9 @@
-                                                       
-                                                       
-                                                       
-                                 
-procedure main (         void)
-{
-  int                    counter; 
-
-  counter =       101;
-                     
-  printf ("counter = %d\n", counter);
-  printf ("/* Will this string be displayed? */\n");
-   
-  
-  
+                                                     
+                                                     
+                                                      
+procedure main (void)
+{
+  int counter;
+*/
+  counter = 100 / 2;
 }
