@@ -3,19 +3,25 @@
 
 CommentIdentifierDFA::CommentIdentifierDFA() : state_(State::START) {}
 
-bool CommentIdentifierDFA::processChar(char ch) {
+void CommentIdentifierDFA::processChar(char ch) {
     switch (state_) {
         case State::START:
             if (ch == '/') {
                 state_ = State::SLASH;
             }
+            if(isComment == true){
+                isComment = false;
+            }
             break;
         case State::SLASH:
             if (ch == '*') {
+                isComment = true;
                 state_ = State::BLOCK_COMMENT;
             } else if (ch == '/') {
+                isComment = true;
                 state_ = State::LINE_COMMENT;
             } else {
+                isComment = false;
                 state_ = State::START;
             }
             break;
@@ -39,11 +45,6 @@ bool CommentIdentifierDFA::processChar(char ch) {
         default:
             break;
     }
-    return isComment();
-}
-
-bool CommentIdentifierDFA::isComment() const {
-    return state_ == State::LINE_COMMENT || state_ == State::BLOCK_COMMENT || state_ == State::BLOCK_COMMENT_END;
 }
 
 bool CommentIdentifierDFA::isActive() const {

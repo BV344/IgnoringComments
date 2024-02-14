@@ -16,10 +16,16 @@ public:
 
     // Stream Solution
     void processFile();
-
-    // In Memory Solution
-    void storeFileInMemory();
+    
+    // Print file from stream vs print file from string storage
+    void printInitialFile();
     void printStoredFile();
+
+    ~FileHandler() {
+        if (fileStream.is_open()) {
+            fileStream.close();
+        }
+    }
 
 private:
     std::vector<char> buffer;

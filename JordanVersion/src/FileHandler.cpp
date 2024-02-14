@@ -38,10 +38,13 @@ void FileHandler::processFile() {
             // If we are potentially inside a comment, push the character into the buffer
             if(comment_dfa.isActive()){
                 buffer.push_back(ch);
+                std::cout << "Read character: " << ch << " (" << (int)ch << ")\n"; // Debug print
             }
             // If the comment DFA is not active, we have reached the end of a comment and need to flush the buffer
             else if (buffer.size() > 0){
-                bufferToWhiteSpace();
+                if(comment_dfa.isComment == true){
+                    bufferToWhiteSpace();
+                }
                 flushBuffer();
             }
             else{
@@ -51,18 +54,51 @@ void FileHandler::processFile() {
     }
 }
 
-
-// Function to read entire file content into a string
-void FileHandler::storeFileInMemory() {
-    if (!fileStream.is_open()) {
-        std::cerr << "Error: File stream is not open.\n";
-        return;
+void FileHandler::bufferToWhiteSpace(){
+    for(int i = 0; i < buffer.size(); i++){
+        if(buffer[i] == '\n'){
+            continue;
+        }
+        buffer[i] = ' ';
     }
-
-    std::stringstream buffer;
-    buffer << fileStream.rdbuf();
-    fileContent = buffer.str();
 }
+
+void FileHandler::flushBuffer(){
+    for(int i = 0; i < buffer.size(); i++){
+        fileContent += buffer[i];
+    }
+    buffer.clear();
+}
+
+
+void FileHandler::printInitialFile() {
+        if (!fileStream) {
+            std::cerr << "Stream is not open." << std::endl;
+            return;
+        }
+
+        // Save the current position of the file stream
+        std::streampos originalPosition = fileStream.tellg();
+
+        // Reset to the start of the file
+        fileStream.seekg(0, std::ios::beg);
+
+        // Read and print the content
+        std::string line;
+        while (getline(fileStream, line)) {
+            std::cout << line << std::endl;
+        }
+
+        // Restore the file stream's position and state
+        fileStream.clear(); // Clear any flags
+        fileStream.seekg(originalPosition);
+
+        // Optionally, confirm the restoration
+        std::streampos newPosition = fileStream.tellg();
+        if (newPosition != originalPosition) {
+            std::cerr << "Failed to restore the stream position." << std::endl;
+        }
+    }
 
 void FileHandler::printStoredFile() {
     std::cout << fileContent;

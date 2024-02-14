@@ -17,10 +17,10 @@ public:
 
     CommentIdentifierDFA();
 
-    bool processChar(char ch);
+    void processChar(char ch);
 
     bool isActive() const;
-    bool isComment() const;
+    bool isComment;
 
     void reset();
 
