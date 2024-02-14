@@ -28,7 +28,7 @@ void FileHandler::processFile() {
 
     char ch;
     while (fileStream.get(ch)) {
-        if(comment_dfa.isComment == false){
+        if(buffer.size()==0){
         string_dfa.processChar(ch);
         }
         // If we're inside a string literal, we don't care about comments
@@ -56,7 +56,9 @@ void FileHandler::processFile() {
         }
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
-        std::cout << "there is an error" << std::endl;
+        if(comment_dfa.getState() != CommentIdentifierDFA::State::LINE_COMMENT){
+            std::cout << "there is an error" << std::endl;
+        }
     }
 }
 
