@@ -19,6 +19,7 @@ public:
 
     bool processChar(char ch);
 
+    bool isActive() const;
     bool isComment() const;
 
     void reset();

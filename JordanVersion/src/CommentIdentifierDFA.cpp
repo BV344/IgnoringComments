@@ -46,6 +46,10 @@ bool CommentIdentifierDFA::isComment() const {
     return state_ == State::LINE_COMMENT || state_ == State::BLOCK_COMMENT || state_ == State::BLOCK_COMMENT_END;
 }
 
+bool CommentIdentifierDFA::isActive() const {
+    return state_ != State::START;
+}
+
 void CommentIdentifierDFA::reset() {
     state_ = State::START;
 }

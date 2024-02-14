@@ -22,8 +22,9 @@ public:
     void printStoredFile();
 
 private:
-    // static void flushBufferAsSpaces(std::vector<char>& buffer);
-    // static void flushBuffer(std::vector<char>& buffer);
+    std::vector<char> buffer;
+    void bufferToWhiteSpace();
+    void flushBuffer();
 };
 
 #endif // FILEHANDLER_H
