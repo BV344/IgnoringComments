@@ -14,7 +14,7 @@ BIN_DIR = _bin
 INC_DIR = include
 
 # Target executable name
-TARGET = myapp
+TARGET = aone
 
 # Source and object files
 SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
