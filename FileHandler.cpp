@@ -122,7 +122,7 @@ FileHandler::FileHandler() {
 }
 
 void FileHandler::outputToFile() {
-    std::ofstream outputFile("output.txt"); // Open File
+    std::ofstream outputFile("output.c"); // Open File
     if (outputFile.is_open()) {
         outputFile << fileContent; // Write the string to the file
         outputFile.close();
