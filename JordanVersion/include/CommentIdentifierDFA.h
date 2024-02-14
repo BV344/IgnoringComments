@@ -12,8 +12,7 @@ public:
         SLASH,
         BLOCK_COMMENT,
         LINE_COMMENT,
-        BLOCK_COMMENT_END,
-        BLOCK_COMMENT_END_SLASH
+        BLOCK_COMMENT_END
     };
 
     CommentIdentifierDFA();
