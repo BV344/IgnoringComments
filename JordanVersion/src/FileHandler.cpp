@@ -54,8 +54,13 @@ void FileHandler::processFile() {
             }
         }
     }
+    if (comment_dfa.isComment == true && buffer.size() > 0){
+        std::cout << "there is an error" << std::endl;
+    }
 }
 
+// bufferToWhiteSpace
+// Buffer is converted to whitespace
 void FileHandler::bufferToWhiteSpace(){
     for(int i = 0; i < buffer.size(); i++){
         if(buffer[i] == '\n'){
@@ -65,6 +70,8 @@ void FileHandler::bufferToWhiteSpace(){
     }
 }
 
+// flushBuffer
+// Buffer is written to fileContent then cleared
 void FileHandler::flushBuffer(){
     for(int i = 0; i < buffer.size(); i++){
         fileContent += buffer[i];
@@ -72,7 +79,8 @@ void FileHandler::flushBuffer(){
     buffer.clear();
 }
 
-
+// printInitialFile
+// reads and prints the fileStream then resets its position back to where it was before
 void FileHandler::printInitialFile() {
         if (!fileStream) {
             std::cerr << "Stream is not open." << std::endl;
@@ -85,7 +93,7 @@ void FileHandler::printInitialFile() {
         // Reset to the start of the file
         fileStream.seekg(0, std::ios::beg);
 
-        // Read and print the content
+        // Read and print the file contents
         std::string line;
         while (getline(fileStream, line)) {
             std::cout << line << std::endl;
@@ -95,7 +103,7 @@ void FileHandler::printInitialFile() {
         fileStream.clear(); // Clear any flags
         fileStream.seekg(originalPosition);
 
-        // Optionally, confirm the restoration
+        // Confirm the restoration
         std::streampos newPosition = fileStream.tellg();
         if (newPosition != originalPosition) {
             std::cerr << "Failed to restore the stream position." << std::endl;
