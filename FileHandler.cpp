@@ -63,7 +63,7 @@ void FileHandler::processFile() {
         }
     }
     if (comment_dfa.isComment == true && buffer.size() > 0){
-        std::cout << "there is an error on line: " << lineNumber << std::endl;
+        std::cout << "ERROR: program contains C-style, unterminated comment on line " << lineNumber << std::endl;
         exit(12);
     }
 }
