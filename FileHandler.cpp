@@ -122,10 +122,10 @@ FileHandler::FileHandler() {
 }
 
 void FileHandler::outputToFile() {
-    std::ofstream outputFile("output.txt"); // Open the file for writing
-    if (outputFile.is_open()) { // Check if the file is opened successfully
+    std::ofstream outputFile("output.txt"); // Open File
+    if (outputFile.is_open()) {
         outputFile << fileContent; // Write the string to the file
-        outputFile.close(); // Close the file
+        outputFile.close();
         std::cout << "String has been written to output.txt successfully." << std::endl;
     } else {
         std::cerr << "Unable to open output.txt for writing." << std::endl;
